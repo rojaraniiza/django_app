@@ -1,7 +1,7 @@
 appdirs
 bcrypt
 cffi
-Django==2.1.4
+django>=2.2.13
 django-audit-log
 django-auditlog
 django-crispy-forms
