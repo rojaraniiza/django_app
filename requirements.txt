@@ -1,0 +1,14 @@
+appdirs
+bcrypt
+cffi
+Django==2.1.4
+django-audit-log
+django-auditlog
+django-crispy-forms
+django-jsonfield
+django-sslserver
+packaging
+pycparser
+pyparsing
+pytz
+six
