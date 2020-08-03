@@ -138,5 +138,7 @@ SENDGRID_ECHO_TO_STDOUT=True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '/ptech_ste/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '/ptech_site/static')]
+STATIC_ROOT = "/home/rojaraniiza/django_app/ptech_site/static"
+
 LOGOUT_REDIRECT_URL = '/'
