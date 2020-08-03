@@ -12,3 +12,6 @@ pycparser
 pyparsing
 pytz
 six
+django-sendgrid-v5
+django-environ
+psycopg2-binary
