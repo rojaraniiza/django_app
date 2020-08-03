@@ -11,20 +11,13 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import environ
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
-# reading .env file
-environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = env('SENDGRID_API_KEY')
-FROM_EMAIL = env('FROM_EMAIL')
+SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+FROM_EMAIL = os.getenv('FROM_EMAIL')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -90,13 +83,13 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.mysql',
 
-        'NAME': env('DB_NAME'),
+        'NAME': os.getenv('DB_NAME'),
 
-        'USER': env('DB_USERNAME'),
+        'USER': os.getenv('DB_USERNAME'),
 
-        'PASSWORD': env('PASSWORD'),
+        'PASSWORD': os.getenv('PASSWORD'),
 
-        'HOST': env('DB_HOST'),
+        'HOST': os.getenv('DB_HOST'),
 
         'PORT': '3306',
 
